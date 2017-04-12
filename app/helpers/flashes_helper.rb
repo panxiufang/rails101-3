@@ -1,4 +1,4 @@
-mould FlashesHelper
+module FlashesHelper
   FLASH_CLASSES = { alert: "danger", notice: "success", warning: "warning"}.freeze
 
   def flash_class(key)
@@ -6,6 +6,6 @@ mould FlashesHelper
   end
 
   def user_facing_flashes
-    flash.to _hash.slice "alert", "notice", "warning"
+    flash.to_hash.slice "alert", "notice", "warning"
   end
 end
